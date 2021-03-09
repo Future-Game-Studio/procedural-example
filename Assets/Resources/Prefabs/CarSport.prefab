@@ -4889,7 +4889,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979108484691793411, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6
+      value: 1.644
       objectReference: {fileID: 0}
     - target: {fileID: 8979108484691793411, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5028,38 +5028,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 9135025014665202198}
     m_Modifications:
-    - target: {fileID: 6293772417108169580, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 1e-45
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293772417108169580, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293772417108169580, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 6293772417108169580, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979108484691793408, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.w
-      value: 6.8613606e-18
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979108484691793408, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.x
-      value: 0.296875
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979108484691793408, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.y
-      value: 47
-      objectReference: {fileID: 0}
-    - target: {fileID: 8979108484691793408, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
-      propertyPath: m_BoundingSphereOverride.z
-      value: 14
-      objectReference: {fileID: 0}
     - target: {fileID: 8979108484691793410, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
       propertyPath: m_Name
       value: CarLight (1)
@@ -5070,7 +5038,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979108484691793411, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6
+      value: 1.644
       objectReference: {fileID: 0}
     - target: {fileID: 8979108484691793411, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
       propertyPath: m_LocalPosition.y
@@ -5078,7 +5046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8979108484691793411, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.686
+      value: -0.69
       objectReference: {fileID: 0}
     - target: {fileID: 8979108484691793411, guid: b6e58c2fef4abb5409ee59195ce34de7, type: 3}
       propertyPath: m_LocalRotation.w

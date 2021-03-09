@@ -293,7 +293,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 10, z: 11, w: -11}
+  m_BoundingSphereOverride: {x: -12, y: 8, z: 1.7e-44, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -395,15 +395,15 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 25.613, y: 0, z: 0}
---- !u!114 &1702995793 stripped
+--- !u!114 &1334573555 stripped
 MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7339498998802242668, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3201310250264116336, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
   m_PrefabInstance: {fileID: 3520803428199065104}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d294f3a57c669be42883717574068d16, type: 3}
+  m_Script: {fileID: 11500000, guid: ddaaaad120fc87146a80371cab5a4371, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!4 &1702995794 stripped
@@ -456,7 +456,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3376baea9a6ad14391886caf884b9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  binder: {fileID: 1702995793}
+  binder: {fileID: 1334573555}
   levelSize: 40
 --- !u!1001 &3520803428199065104
 PrefabInstance:
@@ -513,5 +513,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBinder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7339498998802242668, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}

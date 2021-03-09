@@ -152,7 +152,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e3376baea9a6ad14391886caf884b9d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  binder: {fileID: 472876255}
+  binder: {fileID: 1889039377}
   levelSize: 40
 --- !u!4 &315940760
 Transform:
@@ -266,17 +266,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 391494588}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &472876255 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7339498998802242668, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
-  m_PrefabInstance: {fileID: 1177543072}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d294f3a57c669be42883717574068d16, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &472876256 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1054353440695523174, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
@@ -420,7 +409,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: LevelBinder
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7339498998802242668, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
 --- !u!1 &1888907473
 GameObject:
@@ -515,3 +505,14 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!114 &1889039377 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3201310250264116336, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
+  m_PrefabInstance: {fileID: 1177543072}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddaaaad120fc87146a80371cab5a4371, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

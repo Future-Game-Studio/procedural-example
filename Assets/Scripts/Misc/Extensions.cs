@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace Examples.Extensions
+namespace FUGAS.Examples.Misc.Extensions
 {
     public static class Extensions
     {
@@ -30,6 +30,16 @@ namespace Examples.Extensions
             return (matrix.GetLength(0), matrix.GetLength(1));
         }
 
+        public static void SetAll<T>(this T[,] matrix, T value)
+        {
+            for (int i = 0; i < matrix.GetLength(0); i++)
+            {
+                for (int j = 0; j < matrix.GetLength(1); j++)
+                {
+                    matrix[i, j] = value;
+                }
+            }
+        }
         public static void FillContour<T>(this T[,] matrix, T value)
         {
             var (mh, mw) = matrix.Size();

@@ -1,7 +1,8 @@
-using Examples.Constants;
-using Examples.Extensions;
+using FUGAS.Examples.Constants;
+using FUGAS.Examples.Misc.Extensions;
+using FUGAS.Examples.Generator.Abstractions;
 
-namespace Examples.Scripts
+namespace FUGAS.Examples.Generator.Strategies
 {
     public class CarInGarageStrategy : IGeneratorStrategy
     {

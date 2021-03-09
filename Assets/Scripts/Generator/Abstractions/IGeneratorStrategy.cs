@@ -1,6 +1,6 @@
-using Examples.Constants;
+using FUGAS.Examples.Constants;
 
-namespace Examples.Scripts
+namespace FUGAS.Examples.Generator.Abstractions
 {
     interface IGeneratorStrategy
     {

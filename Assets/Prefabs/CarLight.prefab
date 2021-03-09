@@ -77,7 +77,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -88,7 +88,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 1e-45}
+  m_BoundingSphereOverride: {x: 872451, y: NaN, z: 0, w: 4.0058793e-11}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
@@ -138,8 +138,8 @@ Light:
   m_Shape: 0
   m_Color: {r: 0.9433962, g: 0.86181325, b: 0.6007476, a: 1}
   m_Intensity: 15
-  m_Range: 81.21
-  m_SpotAngle: 51
+  m_Range: 80
+  m_SpotAngle: 50
   m_InnerSpotAngle: 11.78509
   m_CookieSize: 10
   m_Shadows:
@@ -182,7 +182,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 2.3509887e-38, z: 2.7107536e-20, w: 7.737127e+25}
+  m_BoundingSphereOverride: {x: 872451, y: NaN, z: 0, w: 4.0058793e-11}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
