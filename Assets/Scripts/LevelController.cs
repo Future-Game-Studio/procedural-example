@@ -9,7 +9,7 @@ namespace FUGAS.Examples
 {
     public class LevelController : MonoBehaviour
     {
-        private SquareLevelConfigurator generator;
+        private ILevelConfigurator _configurator;
         public LevelBinder binder;
         public int levelSize = 40;
         private GameObject _rootContainer;
@@ -18,7 +18,7 @@ namespace FUGAS.Examples
 
         void Awake()
         {
-            generator = new SquareLevelConfigurator();
+            _configurator = new SquareLevelConfigurator();
             _rootContainer = new GameObject("generator_root");
             _rootContainer.transform.parent = this.transform;
             _strategies = new IGeneratorStrategy[]
@@ -30,7 +30,7 @@ namespace FUGAS.Examples
             };
 
             // preconfigure static values
-            generator.OfSize(levelSize)
+            _configurator.OfSize(levelSize)
                     .UseMapBinder(binder)
                     .OnConfigureBinder(b => b.Target(_rootContainer));
         }
@@ -46,7 +46,7 @@ namespace FUGAS.Examples
             _rootContainer.DestroyChildren();
 
             // create map
-            var map = generator
+            var map = _configurator
                      .UseStrategy(_strategies[_currentStrategy])
                      .GetBuilder();
             BindScene(map);
