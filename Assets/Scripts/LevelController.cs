@@ -27,7 +27,8 @@ namespace FUGAS.Examples
                 new CarInGarageStrategy(),
                 new CarCollectionStrategy(2,2),
                 new CarInGarageStrategy(),
-                new RandomCarLocationStrategy()
+                // generate randomly up to 10 cars with radial offset of 7 units
+                new RandomCarLocationStrategy(10, 7)
             };
 
             // preconfigure static values
