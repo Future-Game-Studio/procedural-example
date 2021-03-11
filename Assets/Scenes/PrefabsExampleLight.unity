@@ -405,9 +405,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3201310250264116336, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
+      propertyPath: scale
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5072152630821974260, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
       propertyPath: m_Name
       value: LevelBinder
+      objectReference: {fileID: 0}
+    - target: {fileID: 5072152630821974260, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7339498998802242668, guid: 714c9b3dfcc3ce845827301cb0d33990, type: 3}
