@@ -26,7 +26,8 @@ namespace FUGAS.Examples
                 new CarCollectionStrategy(5,5),
                 new CarInGarageStrategy(),
                 new CarCollectionStrategy(2,2),
-                new CarInGarageStrategy()
+                new CarInGarageStrategy(),
+                new RandomCarLocationStrategy()
             };
 
             // preconfigure static values

@@ -22,6 +22,7 @@ namespace FUGAS.Examples.Generator.Strategies
 
         public void Process(PrefabType[,] map)
         {
+            Debug.Log($"Executing strategy: {this.GetType().Name}");
             var (h, w) = map.Size();
             var offsetColl = h * 1f / Mathf.Min(_carCountColl + 1, h);
             var offsetRow = w * 1f / Mathf.Min(_carCountRow + 1, w);
