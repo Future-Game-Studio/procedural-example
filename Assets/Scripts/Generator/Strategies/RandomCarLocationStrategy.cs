@@ -21,16 +21,16 @@ namespace FUGAS.Examples.Generator.Strategies
         {
             Debug.Log($"Executing strategy: {this.GetType().Name}");
 
+            var (h, w) = map.Size();
+            map.FillContour(PrefabType.Wall);
+            
             // in this example there is no filtering or limits
             // and no collision checks
             // ideally you should add offsets and limits in your generator strategies
-
+            
             var generated = new List<(float x, float y)>();
             for (int i = 0; i < _maxItems; i++)
             {
-                var (h, w) = map.Size();
-                map.FillContour(PrefabType.Wall);
-
                 // to enhance algorithm we will check possible 
                 // possitions with minimally allowed radius 
                 // like this >>>  x^2 + y^2 > safeRadius^2
