@@ -9,10 +9,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3556664051347223293}
-  - component: {fileID: 3556664051347223292}
+  - component: {fileID: 2401168317290799862}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -32,25 +32,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!95 &3556664051347223292
-Animator:
-  serializedVersion: 3
+--- !u!114 &2401168317290799862
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3556664051347223294}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 091c17316a5f68645b805c0c6d8227d5, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03efc0c9eb1a2fe459fe62e782c41d8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &3556664051623927061
 GameObject:
   m_ObjectHideFlags: 0
@@ -78,7 +71,7 @@ Transform:
   m_GameObject: {fileID: 3556664051623927061}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: -0.187, z: 0}
-  m_LocalScale: {x: 0.66833, y: 0.66833, z: 0.66833}
+  m_LocalScale: {x: 0.08327474, y: 0.08327474, z: 0.08327474}
   m_Children: []
   m_Father: {fileID: 3556664051826163494}
   m_RootOrder: 0
@@ -4869,7 +4862,7 @@ GameObject:
   - component: {fileID: 3556664051826163490}
   - component: {fileID: 3556664051826163493}
   m_Layer: 0
-  m_Name: Cylinder
+  m_Name: sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4963,7 +4956,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3556664051826163495}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5

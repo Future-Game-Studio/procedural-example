@@ -1,3 +1,4 @@
+using System.Linq;
 using UnityEngine;
 
 namespace FUGAS.Examples.Misc.Extensions
@@ -25,6 +26,13 @@ namespace FUGAS.Examples.Misc.Extensions
                 SafeDestroy(component.gameObject);
             return null;
         }
+
+        public static GameObject GetChildWithName(this GameObject obj, string name)
+        {
+            var res = obj.transform.GetComponentsInChildren<Transform>(true).FirstOrDefault(x => x.gameObject.name == name);
+            return res != default ? res.gameObject : default;
+        }
+        
         public static (int height, int width) Size<T>(this T[,] matrix)
         {
             return (matrix.GetLength(0), matrix.GetLength(1));

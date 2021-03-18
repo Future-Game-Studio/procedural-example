@@ -26,7 +26,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: gun_loading
+  m_Name: gun_fire
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -107,13 +107,13 @@ AnimatorController:
   m_Name: Mounted Gun
   serializedVersion: 5
   m_AnimatorParameters:
-  - m_Name: on_loading
+  - m_Name: on_fire
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
-    m_DefaultBool: 1
+    m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: on_fire
+  - m_Name: on_idle
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -139,10 +139,7 @@ AnimatorStateTransition:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: 
-  m_Conditions:
-  - m_ConditionMode: 1
-    m_ConditionEvent: on_fire
-    m_EventTreshold: 0
+  m_Conditions: []
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -788048789438515707}
   m_Solo: 0
@@ -166,7 +163,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: on_loading
+    m_ConditionEvent: on_fire
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: -4800817193579608362}
@@ -174,9 +171,9 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: 0.24999994
+  m_TransitionDuration: 0.63971835
   m_TransitionOffset: 0
-  m_ExitTime: 0.5429045
+  m_ExitTime: 0.000000020317142
   m_HasExitTime: 1
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
