@@ -1,7 +1,8 @@
+using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
 
-namespace FUGAS.Examples.Misc.Extensions
+namespace FUGAS.Examples.Misc
 {
     public static class Extensions
     {
@@ -32,7 +33,14 @@ namespace FUGAS.Examples.Misc.Extensions
             var res = obj.transform.GetComponentsInChildren<Transform>(true).FirstOrDefault(x => x.gameObject.name == name);
             return res != default ? res.gameObject : default;
         }
-        
+
+
+        public static IEnumerable<GameObject> GetChildsWithName(this GameObject obj, string name)
+        {
+            return obj.transform.GetComponentsInChildren<Transform>(true)
+             .Where(x => x.gameObject.name == name).Select(x => x.gameObject);
+        }
+
         public static (int height, int width) Size<T>(this T[,] matrix)
         {
             return (matrix.GetLength(0), matrix.GetLength(1));

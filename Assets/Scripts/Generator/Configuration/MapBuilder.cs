@@ -1,5 +1,6 @@
 using System;
 using FUGAS.Examples.Constants;
+using FUGAS.Examples.Generator.Configuration.Abstractions;
 
 namespace FUGAS.Examples.Generator.Configuration
 {

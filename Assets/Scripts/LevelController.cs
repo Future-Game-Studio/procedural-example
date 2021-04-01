@@ -1,9 +1,10 @@
-using FUGAS.Examples.Misc.Extensions;
+using FUGAS.Examples.Generator.Abstractions;
+using FUGAS.Examples.Generator.Configuration;
+using FUGAS.Examples.Generator.Configuration.Abstractions;
 using FUGAS.Examples.Generator.Strategies;
 using FUGAS.Examples.Generator.Unity;
+using FUGAS.Examples.Misc;
 using UnityEngine;
-using FUGAS.Examples.Generator.Configuration;
-using FUGAS.Examples.Generator.Abstractions;
 
 namespace FUGAS.Examples
 {

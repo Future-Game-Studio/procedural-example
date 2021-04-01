@@ -1,7 +1,7 @@
 using System;
 using FUGAS.Examples.Constants;
 
-namespace FUGAS.Examples.Generator.Configuration
+namespace FUGAS.Examples.Generator.Configuration.Abstractions
 {
     internal interface IMapBuilder
     {

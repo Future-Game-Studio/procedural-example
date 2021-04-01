@@ -1,6 +1,5 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+
 namespace FUGAS.Examples.Player
 {
     public class PlayerController : MonoBehaviour

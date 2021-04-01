@@ -2,7 +2,7 @@ using System.Collections.Generic;
 using System.Linq;
 using FUGAS.Examples.Constants;
 using FUGAS.Examples.Generator.Abstractions;
-using FUGAS.Examples.Misc.Extensions;
+using FUGAS.Examples.Misc;
 using UnityEngine;
 
 namespace FUGAS.Examples.Generator.Strategies

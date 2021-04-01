@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f11bd7ee20636e3499a1ba56a8c6fc40, type: 3}
+  m_Name: Gun
+  m_EditorClassIdentifier: 
+  Prefab: {fileID: 6026727681737448769, guid: e3f0336bed4261341b92cd65eacafe23, type: 3}
+  FirePoints: 0
+  Damage: 0
+  Cost: 0
+  Locked: 1

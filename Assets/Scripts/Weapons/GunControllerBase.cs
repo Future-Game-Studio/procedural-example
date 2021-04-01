@@ -1,9 +1,8 @@
 using UnityEngine;
-using FUGAS.Examples.Misc.Extensions;
 
 namespace FUGAS.Examples.Player
 {
-    public class TurretController : MonoBehaviour
+    public class GunControllerBase : MonoBehaviour
     {
         private ObjectPooler _objectPooler;
         private Transform _bulletRoot;
@@ -12,14 +11,14 @@ namespace FUGAS.Examples.Player
 
         void Awake()
         {
-            _objectPooler = GetComponent<ObjectPooler>();
+            _objectPooler = this.gameObject.GetComponentInParent<ObjectPooler>();
         }
 
         void Start()
         {
-            _bulletRoot = this.gameObject.GetChildWithName("bullet_root").transform;
+            _bulletRoot = this.gameObject.transform;
             _parentRigidbody = GetComponentInParent<Rigidbody>();
-            _gunAnimator = this.gameObject.GetChildWithName("Mounted Gun").GetComponent<Animator>();
+            _gunAnimator = this.GetComponentInChildren<Animator>();
         }
 
         void Update()
@@ -27,12 +26,14 @@ namespace FUGAS.Examples.Player
             if (Input.GetKey(KeyCode.H))
             {
                 Fire();
-                _gunAnimator.SetTrigger("on_fire");
+                if (_gunAnimator)
+                    _gunAnimator.SetTrigger("on_fire");
             }
 
             if (Input.GetKeyUp(KeyCode.V))
             {
-                _gunAnimator.SetTrigger("on_idle");
+                if (_gunAnimator)
+                    _gunAnimator.SetTrigger("on_idle");
             }
         }
 
@@ -43,16 +44,14 @@ namespace FUGAS.Examples.Player
             {
                 // apply transformations before setting parent
                 bullet.transform.SetPositionAndRotation(_bulletRoot.transform.position, _bulletRoot.transform.rotation);
-
-                // set entry point as bullet root and enable on scene
-                bullet.transform.parent = _bulletRoot.transform;
+ 
                 bullet.SetActive(true);
 
                 // configure exit event
-                bullet.GetComponent<BulletController>().DisableOnDistance(this.transform.position, 30);
+                bullet.GetComponent<BulletController>().DisableOnDistance(_bulletRoot.transform.position, 15);
 
                 // fire!
-                bullet.GetComponentInChildren<Rigidbody>().AddForce(_bulletRoot.transform.forward * 100 + _parentRigidbody.velocity);
+                bullet.GetComponentInChildren<Rigidbody>().AddForce(_bulletRoot.transform.forward * 900 + _parentRigidbody.velocity);
 
             }
             else
