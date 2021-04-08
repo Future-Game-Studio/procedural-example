@@ -1,5 +1,7 @@
+using System;
 using FUGAS.Examples.Events.Entities;
 using FUGAS.Examples.Events.Observer;
+using FUGAS.Examples.Events.Observer.Abstractions;
 using UnityEngine;
 
 namespace FUGAS.Examples.Player
@@ -68,29 +70,25 @@ namespace FUGAS.Examples.Player
 
                 // configure exit event
                 bullet.GetComponent<BulletController>()
-                .DisableOnDistance(_bulletRoot.transform.position, 15,
+                .DisableOnDistance(_bulletRoot.transform.position, 40,
                     () =>
                     {
                         Debug.Log("We are in lambda function");
-                        NotifyQuantity();
+ 
+                        _observer.Notify(new BulletReturnEvent());
                     });
 
                 // fire!
                 bullet.GetComponentInChildren<Rigidbody>().AddForce(_bulletRoot.transform.forward * 900 + _parentRigidbody.velocity);
 
-                NotifyQuantity();
+                var (freeBullets, magazineCapacity) = _objectPooler.GetAvailableCount("Bullet");
+                _observer.Notify(new GunFireEvent(freeBullets, magazineCapacity));
             }
             else
             {
                 _observer.Notify(new GunEmptyMagazineEvent());
                 Debug.Log("Failed to configure bullet, pool returned null");
             }
-        }
-
-        private void NotifyQuantity()
-        {
-            var (freeBullets, magazineCapacity) = _objectPooler.GetAvailableCount("Bullet");
-            _observer.Notify(new GunFireEvent(freeBullets, magazineCapacity));
-        }
+        } 
     }
 }

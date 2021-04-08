@@ -22,10 +22,15 @@ namespace FUGAS.Examples.Events.Listeners
 
         public void OnNotify(IObservableEvent observableEvent)
         {
-            if (observableEvent is GunFireEvent ev)
+            if (observableEvent is BulletReturnEvent bre)
             {
-                _slider.maxValue = ev.MagazineCapacity;
-                _slider.value = ev.Free;
+                _slider.value++;
+            }
+
+            if (observableEvent is GunFireEvent gfe)
+            {
+                _slider.maxValue = gfe.MagazineCapacity;
+                _slider.value = gfe.Free;
             }
         }
     }
