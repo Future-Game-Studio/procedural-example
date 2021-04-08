@@ -1,4 +1,4 @@
-namespace FUGAS.Examples.Events.Observer
+namespace FUGAS.Examples.Events.Observer.Abstractions
 { 
     public abstract class AbstractObserver
     {
