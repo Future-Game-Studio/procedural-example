@@ -1,3 +1,5 @@
+using FUGAS.Examples.Events.Entities;
+using FUGAS.Examples.Events.Observer;
 using UnityEngine;
 
 namespace FUGAS.Examples.Player
@@ -21,6 +23,7 @@ namespace FUGAS.Examples.Player
 
         private void ResetTransforms()
         {
+            FireSystemSubject.Instance.Notify(new BulletReturnEvent());
             this.gameObject.SetActive(false);
 
             // this will reset physical position of collider 

@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
 namespace FUGAS.Examples.Player
@@ -23,14 +24,20 @@ namespace FUGAS.Examples.Player
             foreach (ObjectPoolItem item in itemsToPool)
             {
                 for (int i = 0; i < item.amountToPool; i++)
-                { 
+                {
                     var scale = item.objectToPool.transform.localScale;
                     GameObject obj = (GameObject)Instantiate(item.objectToPool);
-                    obj.transform.parent = this.transform;  
+                    obj.transform.parent = this.transform;
                     obj.SetActive(false);
                     pooledObjects.Add(obj);
                 }
             }
+        }
+
+        public (int free, int max) GetAvailableCount(string tag)
+        {
+            return (pooledObjects.Count(x => !x.activeInHierarchy && x.CompareTag(tag)),
+             pooledObjects.Count(x => x.CompareTag(tag)));
         }
 
         public GameObject GetPooledObject(string tag)

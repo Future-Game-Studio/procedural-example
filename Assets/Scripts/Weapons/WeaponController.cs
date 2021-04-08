@@ -14,11 +14,6 @@ namespace FUGAS.Examples.Scripts
             {
                 root.AddComponent<GunControllerBase>();
             }
-        }
- 
-        void Update()
-        {
-
-        }
+        } 
     }
 }
