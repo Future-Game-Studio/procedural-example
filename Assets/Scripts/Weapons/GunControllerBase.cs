@@ -9,13 +9,13 @@ namespace FUGAS.Examples.Player
         private ObjectPooler _objectPooler;
         private Transform _bulletRoot;
         private Rigidbody _parentRigidbody;
-        private Animator _gunAnimator; 
+        private Animator _gunAnimator;
         private FireSystemSubject _observer;
         private bool _isContinuousFire;
 
         void Awake()
         {
-            _objectPooler = this.gameObject.GetComponentInParent<ObjectPooler>(); 
+            _objectPooler = this.gameObject.GetComponentInParent<ObjectPooler>();
             _observer = FireSystemSubject.Instance;
         }
 
@@ -67,19 +67,30 @@ namespace FUGAS.Examples.Player
                 bullet.SetActive(true);
 
                 // configure exit event
-                bullet.GetComponent<BulletController>().DisableOnDistance(_bulletRoot.transform.position, 15);
+                bullet.GetComponent<BulletController>()
+                .DisableOnDistance(_bulletRoot.transform.position, 15,
+                    () =>
+                    {
+                        Debug.Log("We are in lambda function");
+                        NotifyQuantity();
+                    });
 
                 // fire!
                 bullet.GetComponentInChildren<Rigidbody>().AddForce(_bulletRoot.transform.forward * 900 + _parentRigidbody.velocity);
 
-                var (freeBullets, magazineCapacity) = _objectPooler.GetAvailableCount("Bullet");
-                _observer.Notify(new GunFireEvent(freeBullets, magazineCapacity));
+                NotifyQuantity();
             }
             else
             {
                 _observer.Notify(new GunEmptyMagazineEvent());
                 Debug.Log("Failed to configure bullet, pool returned null");
             }
+        }
+
+        private void NotifyQuantity()
+        {
+            var (freeBullets, magazineCapacity) = _objectPooler.GetAvailableCount("Bullet");
+            _observer.Notify(new GunFireEvent(freeBullets, magazineCapacity));
         }
     }
 }

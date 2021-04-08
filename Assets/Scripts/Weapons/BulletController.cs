@@ -1,5 +1,4 @@
-using FUGAS.Examples.Events.Entities;
-using FUGAS.Examples.Events.Observer;
+using System;
 using UnityEngine;
 
 namespace FUGAS.Examples.Player
@@ -10,10 +9,12 @@ namespace FUGAS.Examples.Player
         private float _targetUnits;
         private Rigidbody _rigidbody;
 
+        public event Action ReachedTarget; 
+
         // Start is called before the first frame update
         void Start()
         {
-            _rigidbody = GetComponentInChildren<Rigidbody>();
+            _rigidbody = GetComponentInChildren<Rigidbody>(); 
         }
 
         internal void OnCollision()
@@ -23,12 +24,13 @@ namespace FUGAS.Examples.Player
 
         private void ResetTransforms()
         {
-            FireSystemSubject.Instance.Notify(new BulletReturnEvent());
             this.gameObject.SetActive(false);
 
             // this will reset physical position of collider 
             _rigidbody.gameObject.transform.position = this.transform.position;
             _rigidbody.velocity = Vector3.zero;
+
+            ReachedTarget?.Invoke();
         }
 
         // Update is called once per frame
@@ -41,10 +43,13 @@ namespace FUGAS.Examples.Player
             }
         }
 
-        public void DisableOnDistance(Vector3 from, float units)
+        public void DisableOnDistance(Vector3 from, float units, Action callback = default)
         {
             _from = from;
             _targetUnits = units;
+
+            if (callback != default)
+                ReachedTarget += callback;
         }
     }
 }
